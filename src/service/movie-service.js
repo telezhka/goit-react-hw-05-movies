@@ -1,6 +1,6 @@
 import axios from 'axios';
 // import { transformCountriesData, transformCountryData } from 'helpers';
-
+// https://api.themoviedb.org/3/movie/869641/wmH3VaUbwwTO3vDJhWT35BOFgb3.jpg?api_key=0c604966c8feeccced3f6943d45eff5e
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
 export const getMovies = async () => {
