@@ -20,8 +20,8 @@ export const App = () => {
         }}
       >
         <Routes>
-          <Route path={routes.HOME} element={<Header></Header>}>
-            <Route index element={<Home></Home>} />
+          <Route path={routes.HOME} element={<Header />}>
+            <Route index element={<Home />} />
             <Route path={routes.MOVIES} element={<Movies />} />
             <Route path={routes.MOVIE_ID} element={<MovieDetails />} />
           </Route>
