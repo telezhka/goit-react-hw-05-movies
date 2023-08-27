@@ -12,11 +12,13 @@ export const getMovies = async () => {
   return data.results;
 };
 
-export const fetchCountry = async name => {
-  const { data } = await axios.get(`/name/${name}`);
+export const fetchMovie = async id => {
+  const { data } = await axios.get(
+    `/movie/${id}?api_key=0c604966c8feeccced3f6943d45eff5e`
+  );
   //   const country = transformCountryData(data);
 
-  //   return country[0];
+  return data;
 };
 
 export const fetchByRegion = async region => {
