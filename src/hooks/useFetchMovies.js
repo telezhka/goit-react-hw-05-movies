@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getMovies } from 'service/movie-service';
 
 export const useFetchMovies = () => {
-  const [countries, setCountries] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
 
@@ -11,8 +11,8 @@ export const useFetchMovies = () => {
     const fetchData = async () => {
       try {
         const response = await getMovies();
-        // setCountries(response);
-        console.log(response);
+        console.log('RESPONSE', response);
+        setMovies(response);
       } catch (error) {
         setIsError(error);
       } finally {
@@ -22,7 +22,7 @@ export const useFetchMovies = () => {
     fetchData();
   }, []);
   return {
-    countries,
+    movies,
     isLoading,
     isError,
   };
