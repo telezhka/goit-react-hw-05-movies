@@ -1,1 +1,1 @@
-export const Revievs = () => {};
+export const Reviews = () => {};

@@ -21,6 +21,22 @@ export const fetchMovie = async id => {
   return data;
 };
 
+export const fetchMovieCredits = async id => {
+  const { data } = await axios.get(
+    `/movie/${id}/credits?api_key=0c604966c8feeccced3f6943d45eff5e`
+  );
+  //   const country = transformCountryData(data);
+
+  return data.cast;
+};
+export const fetchMovieReviews = async id => {
+  const { data } = await axios.get(
+    `/movie/${id}/reviews?api_key=0c604966c8feeccced3f6943d45eff5e`
+  );
+  //   const country = transformCountryData(data);
+
+  return data;
+};
 export const fetchByQuery = async query => {
   const { data } = await axios.get(
     `/search/movie?query=${query}&page=1&api_key=0c604966c8feeccced3f6943d45eff5e`
