@@ -6,7 +6,7 @@ export const Home = () => {
   const { movies, isLoading, isError } = useFetchMovies();
   return (
     <section>
-      {/* <h1>Home</h1> */}
+      <h1>Trending</h1>
       {isError && <p textAlign="center">Something wrong...</p>}
       {isLoading && <p>Is loading</p>}
       {movies.length > 0 && <MovieList movies={movies}></MovieList>}

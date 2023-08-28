@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCredits } from 'service/movie-service';
-// import { fetchMovie } from 'service/country-service';
-
 export const useFetchMovieCredits = () => {
   const [credits, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(false);

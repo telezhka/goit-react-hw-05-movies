@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const ReviewsMarkup = ({ reviews }) => {
   return (
     <ul>
@@ -9,4 +11,11 @@ export const ReviewsMarkup = ({ reviews }) => {
       ))}
     </ul>
   );
+};
+
+ReviewsMarkup.propTypes = {
+  reviews: PropTypes.array,
+  author: PropTypes.string,
+  content: PropTypes.string,
+  id: PropTypes.number,
 };

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Credits = ({ credits }) => {
   return (
     <ul>
@@ -13,4 +15,12 @@ export const Credits = ({ credits }) => {
       ))}
     </ul>
   );
+};
+
+Credits.propTypes = {
+  credits: PropTypes.array,
+  profile_path: PropTypes.string,
+  character: PropTypes.string,
+  name: PropTypes.string,
+  id: PropTypes.number,
 };

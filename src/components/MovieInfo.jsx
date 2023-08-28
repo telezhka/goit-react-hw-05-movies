@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link, Outlet } from 'react-router-dom';
 
 export const MovieInfo = ({
@@ -29,4 +30,14 @@ export const MovieInfo = ({
       </div>
     </section>
   );
+};
+MovieInfo.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    poster_path: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    overview: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.object),
+  }),
 };

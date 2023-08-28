@@ -1,4 +1,4 @@
-// import { Grid, GridItem } from 'components';
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import { routes } from 'routes';
 
@@ -16,4 +16,9 @@ export const MovieList = ({ movies }) => {
       ))}
     </ul>
   );
+};
+MovieList.propTypes = {
+  movies: PropTypes.array,
+  original_title: PropTypes.string,
+  id: PropTypes.number,
 };

@@ -8,10 +8,10 @@ export const Reviews = () => {
       <div>
         {isLoading && <p>Is loading</p>}
         {isError && <p>Something wrong...</p>}
-        {reviews > 0 ? (
+        {reviews && reviews.length > 0 ? (
           <ReviewsMarkup reviews={reviews} />
         ) : (
-          <p>There is nothing inside</p>
+          <p>No reviews available.</p>
         )}
       </div>
     </section>

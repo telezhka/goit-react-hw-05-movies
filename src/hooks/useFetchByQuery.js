@@ -18,7 +18,7 @@ export const useFetchByQuery = () => {
       try {
         const response = await fetchByQuery(movieQuery);
         console.log(response);
-        setMovie(response); // Update the movie state with the fetched data
+        setMovie(response);
       } catch (error) {
         setIsError(error);
       } finally {
@@ -29,7 +29,7 @@ export const useFetchByQuery = () => {
   }, [searchParams]);
 
   const onHandleSubmit = value => {
-    setSearchParams({ query: value }); // Update the query parameter in the URL
+    setSearchParams({ query: value });
   };
 
   return {

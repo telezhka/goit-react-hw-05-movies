@@ -1,5 +1,3 @@
-// export const MovieDetails = () => {};
-// import { Section, Container, CountryInfo, Loader, GoBackBtn } from 'components';
 import { MovieInfo } from 'components/MovieInfo';
 import { useFetchMovie } from 'hooks/useFetchMovie';
 import { Link, Navigate, useLocation } from 'react-router-dom';
@@ -9,7 +7,6 @@ export const MovieDetails = () => {
 
   const location = useLocation();
   const goBackLink = location?.state?.from ?? '/';
-  //   console.log('location', location);
   return (
     <section>
       <div>
