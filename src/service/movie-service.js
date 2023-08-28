@@ -21,9 +21,10 @@ export const fetchMovie = async id => {
   return data;
 };
 
-export const fetchByRegion = async region => {
-  const { data } = await axios.get(`/region/${region}`);
+export const fetchByQuery = async query => {
+  const { data } = await axios.get(
+    `/search/movie?query=${query}&page=1&api_key=0c604966c8feeccced3f6943d45eff5e`
+  );
   //   const countries = transformCountriesData(data);
-
-  //   return countries;
+  return data.results;
 };
