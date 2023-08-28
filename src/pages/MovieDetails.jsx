@@ -13,7 +13,7 @@ export const MovieDetails = () => {
   return (
     <section>
       <div>
-        <Link path={goBackLink}>Back to Movies list</Link>
+        <Link to={goBackLink}>Back to Movies list</Link>
         {isLoading && <p>Is loading</p>}
         {isError && <Navigate to={routes.HOME} replace />}
         {movie && <MovieInfo movie={movie} />}
