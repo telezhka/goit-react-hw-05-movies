@@ -1,5 +1,7 @@
+import { Link, Outlet } from 'react-router-dom';
+
 export const MovieInfo = ({
-  movie: { title, poster_path, vote_average, overview, genres = [] },
+  movie: { id, title, poster_path, vote_average, overview, genres = [] },
 }) => {
   //   console.log(genres);
   const onlyGenres = genres.map(genre => genre.name);
@@ -13,6 +15,18 @@ export const MovieInfo = ({
       <p>{overview}</p>
       <h2>Genres</h2>
       <p>{onlyGenres.join(', ')}</p>
+      <div>
+        <h2>Additional information</h2>
+        <ul>
+          <li>
+            <Link to={`/movies/${id}/cast`}>Cast</Link>
+          </li>
+          <li>
+            <Link to={`/movies/${id}/reviews`}>Reviews</Link>
+          </li>
+        </ul>
+        <Outlet />
+      </div>
     </section>
   );
 };
