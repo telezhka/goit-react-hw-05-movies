@@ -3,7 +3,10 @@ export const Credits = ({ credits }) => {
     <ul>
       {credits.map(({ profile_path, character, name, id }) => (
         <li key={id}>
-          <img src={profile_path} alt={name} />
+          <img
+            src={`https://image.tmdb.org/t/p/w300${profile_path}`}
+            alt={name}
+          />
           <p>{name}</p>
           <p>Character: {character}</p>
         </li>

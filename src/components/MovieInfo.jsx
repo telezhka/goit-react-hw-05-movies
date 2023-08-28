@@ -8,7 +8,7 @@ export const MovieInfo = ({
   //   console.log('only', onlyGenres);
   return (
     <section>
-      <img src={poster_path} alt={title} />
+      <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
       <h1>{title}</h1>
       <p>User score: {vote_average}</p>
       <h2>Overview</h2>
