@@ -35,7 +35,7 @@ export const fetchMovieReviews = async id => {
   );
   //   const country = transformCountryData(data);
 
-  return data;
+  return data.results;
 };
 export const fetchByQuery = async query => {
   const { data } = await axios.get(
