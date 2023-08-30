@@ -33,11 +33,11 @@ export const MovieInfo = ({
 };
 MovieInfo.propTypes = {
   movie: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    poster_path: PropTypes.string.isRequired,
-    vote_average: PropTypes.number.isRequired,
-    overview: PropTypes.string.isRequired,
+    id: PropTypes.number,
+    title: PropTypes.string,
+    poster_path: PropTypes.string,
+    vote_average: PropTypes.number,
+    overview: PropTypes.string,
     genres: PropTypes.arrayOf(PropTypes.object),
   }),
 };

@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { fetchByQuery } from 'service/movie-service';
 
 export const useFetchByQuery = () => {
+  const [queryF, setQueryF] = useState('');
   const [movie, setMovie] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
@@ -30,9 +31,14 @@ export const useFetchByQuery = () => {
 
   const onHandleSubmit = value => {
     setSearchParams({ query: value });
+    setQueryF(value);
   };
+  useEffect(() => {
+    console.log('query func', queryF);
+  }, [queryF]);
 
   return {
+    queryF,
     movie,
     isLoading,
     isError,
