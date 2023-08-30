@@ -4,7 +4,7 @@ import { routes } from 'routes';
 
 export const MovieList = ({ movies }) => {
   const location = useLocation();
-  // console.log(location);
+  // console.log('MovList', location);
   return (
     <ul>
       {movies.map(({ original_title, id }) => (

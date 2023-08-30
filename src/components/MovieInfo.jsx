@@ -4,9 +4,8 @@ import { Link, Outlet } from 'react-router-dom';
 export const MovieInfo = ({
   movie: { id, title, poster_path, vote_average, overview, genres = [] },
 }) => {
-  //   console.log(genres);
+  // console.log('MovInfo', location);
   const onlyGenres = genres.map(genre => genre.name);
-  //   console.log('only', onlyGenres);
   return (
     <section>
       <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />

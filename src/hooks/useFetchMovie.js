@@ -14,7 +14,7 @@ export const useFetchMovie = () => {
         const response = await fetchMovie(movieId);
         setMovie(response);
         // console.log(id);
-        console.log('response', response);
+        // console.log('response', response);
       } catch (error) {
         setIsError(error);
       } finally {
